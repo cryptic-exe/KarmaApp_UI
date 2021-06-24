@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'profilePage.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -118,7 +119,10 @@ class _LoginPageState extends State<LoginPage> {
                         primary: Colors.greenAccent[400], // background
                         onPrimary: Colors.white, // foreground
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => ProfilePage()));
+                      },
                       child: Text('Login'),
                     ),
                     Row(
